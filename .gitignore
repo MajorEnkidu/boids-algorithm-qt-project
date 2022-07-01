@@ -316,3 +316,8 @@ build/Testing/20220630-2014/Test.xml
 build/Testing/Temporary/CTestCostData.txt
 build/Testing/Temporary/LastTest_20220630-2014.log
 build/Testing/Temporary/LastTest.log
+.vscode/targets.log
+.vscode/dryrun.log
+.vscode/configurationCache.log
+main.d
+boids
