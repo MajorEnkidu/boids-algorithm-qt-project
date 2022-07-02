@@ -7,7 +7,7 @@
         "program": "${workspaceFolder}/boids",
         "args": [],
         "stopAtEntry": false,
-        "cwd": "${fileDirname}",
+        "cwd": "${workspaceFolder}",
         "environment": [],
         "externalConsole": false,
         "MIMode": "gdb",
@@ -23,7 +23,8 @@
                 "ignoreFailures": true
             }
         ],
-        "preLaunchTask": "Build"
+        "preLaunchTask": "Build",
+        "postDebugTask": "Clean"
     }
     ]
 }

@@ -4,14 +4,44 @@
     "version": "2.0.0",
     "tasks": [
         {
-            "label": "Build",
+            "label": "Create build dir",
             "type": "shell",
-            "command": "make",
-            "problemMatcher": [],
+            "command": "mkdir -p ./build"
+        },
+        {
+            "label": "Delete build dir",
+            "type": "shell",
+            "command": "rm -r -f ./build"
+        },
+        {
+            "label": "Run make",
+            "type": "shell",
+            "command": "make"
+        },
+        {
+            "label": "Run make clean",
+            "type": "shell",
+            "command": "make clean"
+        },
+        {
+            "label": "Build",
+            "dependsOn":[
+                "Create build dir",
+                "Run make"
+            ],
+            "dependsOrder": "sequence",
             "group": {
                 "kind": "build",
                 "isDefault": true
             }
+        },
+        {
+            "label": "Clean",
+            "dependsOn":[
+                "Run make clean",
+                "Delete build dir"
+            ],
+            "dependsOrder": "sequence"
         }
     ]
 }
