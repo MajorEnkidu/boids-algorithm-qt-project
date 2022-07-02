@@ -1,5 +1,6 @@
-#include <iostream>
+#include <QTextStream>
 
-int main(int, char**) {
-    std::cout << "Hello, world!\n";
+int main() {
+    QTextStream(stdout) << "Hello, world!" << Qt::endl;
+    return 0;
 }
