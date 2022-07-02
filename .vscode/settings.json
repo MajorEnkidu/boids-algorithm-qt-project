@@ -1,4 +1,7 @@
 {
-    "C_Cpp.default.configurationProvider": "ms-vscode."
-
+    "C_Cpp.default.configurationProvider": "ms-vscode.makefile-tools",
+    "code-runner.executorMapByFileExtension": {
+        ".qrc": "qtcreator -client",
+        ".ui": "designer"
+    }
 }

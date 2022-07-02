@@ -14,6 +14,11 @@
             "command": "rm -r -f ./build"
         },
         {
+            "label": "Run qmake",
+            "type": "shell",
+            "command": "qmake"
+        },
+        {
             "label": "Run make",
             "type": "shell",
             "command": "make"
@@ -27,6 +32,7 @@
             "label": "Build",
             "dependsOn":[
                 "Create build dir",
+                "Run qmake",
                 "Run make"
             ],
             "dependsOrder": "sequence",
@@ -38,7 +44,6 @@
         {
             "label": "Clean",
             "dependsOn":[
-                "Run make clean",
                 "Delete build dir"
             ],
             "dependsOrder": "sequence"
